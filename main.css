@@ -1,10 +1,11 @@
-/* CSS Color Variables */
+/* CSS Global Variables */
 :root {
     --primary: #ddd;
     --dark: #333;
     --light: #fff;
     --bgcolor: #ccc;
     --shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+    --roundness: 7px;
 }
 
 html {
@@ -14,8 +15,9 @@ html {
 }
 
 body {
-    background: var(--bgcolor);
-    margin: 20px 50px;
+    /*background: var(--bgcolor);*/
+    margin: 0px;
+    padding: 0px;
     line-height: 1.4;
 }
 
@@ -25,6 +27,7 @@ body {
     padding: 0.6rem 1.3rem;
     text-decoration: none;
     border: 0;
+    border-radius: var(--roundness);
 }
 
 .btn:hover {
@@ -41,49 +44,85 @@ img {
     grid-gap: 20px;
 }
 
-/* NAVIGATION */
+/* NAVIGATION
 .main-nav ul {
     display: grid;
-    grid-gap: 20px;
-    padding: 0;
+    grid-gap: 1px;
+    padding: 0px 9rem;
     list-style: none;
     grid-template-columns: repeat(3, 1fr);
 }
 
 .main-nav a {
-    background: var(--primary);
     display: block;
     text-decoration: none;
     padding: 0.8rem;
     text-align: center;
     color: var(--dark);
     font-size: 1.1rem;
-    box-shadow: var(--shadow);
 }
 
 .main-nav a:hover {
     background: var(--dark);
     color: var(--primary);
-    
+}*/
+
+#bgimg {
+    background: url(img/stocklaptop.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-bottom: 30px;
+}
+
+.navbar {
+    display: grid;
+    grid-auto-flow: column;
+    background-color: rgba(0,0,0,0.3);
+    grid-gap: 20px;
+    padding-left: 45px;
+    padding-right: 20px;
+    font-size: 120%;
+}
+
+#logo {
+    display: grid;
+    justify-content: start;
+    align-content: center;
+    color: var(--light);
+}
+
+#links {
+    display: grid;
+    justify-content: end;
+    align-content: center;
+    grid-auto-flow: column;
+    grid-gap: 10px;
+}
+
+#links a{
+    display: block;
+    text-decoration: none;
+    color: var(--light);
+    padding: 5px 30px;
+    border-radius: var(--roundness);
+}
+
+#links a:hover{
+    background: var(--light);
+    color: var(--dark);
 }
 
 /* Top Container */
 .top-container {
     padding-bottom: 30px;
-    display: grid;
     grid-gap: 20px;
-    grid-template-areas:
-        'firstblock firstblock'
-        'firstblock firstblock';
 }
 
 /* FirstBlock */
 .firstblock {
     grid-area: firstblock;
-    min-height: 600px;
-    background: url(img/stocklaptop.jpg);
-    background-size: cover;
-    background-position: center;
+    min-height: 800px;
     padding: 3rem;
     display: flex;
     flex-direction: column;
