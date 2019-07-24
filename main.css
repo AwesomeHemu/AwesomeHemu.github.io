@@ -10,8 +10,9 @@
 
 html {
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Raleway', sans-serif;
     color: var(--dark);
+    scroll-behavior: smooth;
 }
 
 body {
@@ -33,10 +34,6 @@ body {
 .btn:hover {
     background: var(--light);
     color: var(--dark);
-}
-
-img {
-    max-width: 100%;
 }
 
 .wrapper {
@@ -72,23 +69,25 @@ img {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    margin-bottom: 30px;
 }
 
 .navbar {
+    /*font-family: Fredoka One;*/
+    position: fixed;
+    width: 100%;
     display: grid;
     grid-auto-flow: column;
-    background-color: rgba(0,0,0,0.3);
-    grid-gap: 20px;
-    padding-left: 45px;
-    padding-right: 20px;
+    background-color: rgba(0,0,0,0.4);
+    grid-gap: 0px;
     font-size: 120%;
 }
 
 #logo {
+    font-family: Raleway;
     display: grid;
     justify-content: start;
     align-content: center;
+    padding-left: 45px;
     color: var(--light);
 }
 
@@ -98,6 +97,7 @@ img {
     align-content: center;
     grid-auto-flow: column;
     grid-gap: 10px;
+    padding-right: 20px;
 }
 
 #links a{
@@ -122,13 +122,14 @@ img {
 /* FirstBlock */
 .firstblock {
     grid-area: firstblock;
-    min-height: 800px;
+    height: 100vh;
     padding: 3rem;
+    padding-bottom: 0px;
+    margin-bottom: 0;
     display: flex;
     flex-direction: column;
     align-items: start;
     justify-content: center;
-    box-shadow: var(--shadow);
 }
 
 .firstblock h1 {
@@ -145,11 +146,22 @@ img {
 
 /* boxes */
 
+.about{
+    margin-top: 0px;
+    min-height: 80vh;
+    padding: 30px 200px;
+}
+
+.about h1 {
+    font-size: 350%;
+    padding-bottom: 60px;
+}
+
 .boxes {
-    padding-bottom: 30px;
+    min-height: 40vh;
     display: grid;
-    grid-gap: 20px;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 40px;
+    grid-template-columns: repeat(3, minmax(280px, 1fr));
 }
 
 .box {
@@ -159,10 +171,10 @@ img {
     box-shadow: var(--shadow);
 }
 .box h3 {
-    font-size: 1.7rem;
+    font-size: 2rem;
 }
 .box p {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
 }
 
 /* Info */
@@ -193,6 +205,12 @@ footer {
     }
     .firstblock p {
         font-size: 2rem;
+    }
+}
+
+@media(max-width: 1300px) {
+    .boxes {
+        grid-template-columns: repeat(1, minmax(280px, 1fr));
     }
 }
 
