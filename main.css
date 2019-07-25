@@ -1,4 +1,4 @@
-/* CSS Global Variables */
+/* CSS Global Variables   ---------NEO SANS FONT--------- */
 :root {
     --primary: #ddd;
     --dark: #333;
@@ -41,45 +41,25 @@ body {
     grid-gap: 20px;
 }
 
-/* NAVIGATION
-.main-nav ul {
-    display: grid;
-    grid-gap: 1px;
-    padding: 0px 9rem;
-    list-style: none;
-    grid-template-columns: repeat(3, 1fr);
-}
-
-.main-nav a {
-    display: block;
-    text-decoration: none;
-    padding: 0.8rem;
-    text-align: center;
-    color: var(--dark);
-    font-size: 1.1rem;
-}
-
-.main-nav a:hover {
-    background: var(--dark);
-    color: var(--primary);
-}*/
-
 #bgimg {
     background: url(img/stocklaptop.jpg);
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat;    
 }
 
+/*navbar ---------------------------------- */
 .navbar {
     /*font-family: Fredoka One;*/
     position: fixed;
     width: 100%;
+    height: 8%;
     display: grid;
     grid-auto-flow: column;
     background-color: rgba(0,0,0,0.4);
     grid-gap: 0px;
     font-size: 120%;
+    align-content: center;
 }
 
 #logo {
@@ -97,14 +77,14 @@ body {
     align-content: center;
     grid-auto-flow: column;
     grid-gap: 10px;
-    padding-right: 20px;
+    padding-right: 28px;
 }
 
 #links a{
     display: block;
     text-decoration: none;
     color: var(--light);
-    padding: 5px 30px;
+    padding: 5px 30px;    
     border-radius: var(--roundness);
 }
 
@@ -113,7 +93,12 @@ body {
     color: var(--dark);
 }
 
-/* Top Container */
+#links a:active {
+    background: var(--dark);
+    color: var(--light);
+}
+
+/* Top Container -------------------------- */
 .top-container {
     padding-bottom: 30px;
     grid-gap: 20px;
@@ -122,7 +107,7 @@ body {
 /* FirstBlock */
 .firstblock {
     grid-area: firstblock;
-    height: 100vh;
+    height: 93vh;
     padding: 3rem;
     padding-bottom: 0px;
     margin-bottom: 0;
@@ -144,21 +129,21 @@ body {
     color: var(--light);
 }
 
-/* boxes */
+/* About Us ------------------------------ */
 
 .about{
     margin-top: 0px;
-    min-height: 80vh;
+    min-height: 67vh;
     padding: 30px 200px;
 }
 
 .about h1 {
-    font-size: 350%;
+    font-size: 3.5rem;
     padding-bottom: 60px;
+    text-align: center;
 }
 
 .boxes {
-    min-height: 40vh;
     display: grid;
     grid-gap: 40px;
     grid-template-columns: repeat(3, minmax(280px, 1fr));
@@ -167,17 +152,17 @@ body {
 .box {
     background: var(--primary);
     text-align: center;
-    padding: 1.5rem 2rem;
+    padding: 1.7rem 2rem;
     box-shadow: var(--shadow);
 }
 .box h3 {
-    font-size: 2rem;
+    font-size: 2.17rem;
 }
 .box p {
     font-size: 1.5rem;
 }
 
-/* Info */
+/* Info ---------------------------------- */
 .info {
     background: var(--primary);
     box-shadow: var(--shadow);
@@ -188,6 +173,7 @@ body {
 }
 
 footer {
+    /*maybe delete the top margin?*/
     margin-top: 2rem;
     background: var(--dark);
     color: var(--light);
@@ -195,7 +181,7 @@ footer {
     padding: 0.4rem;
 }
 
-/* Media Queries */
+/* Media Queries --------------------------------------------------------- */
 @media(max-width: 800px) {
     .firstblock {
         min-height: 400px;
@@ -233,6 +219,3 @@ footer {
         font-size: 1rem;
     }
 }
-
-
-
