@@ -8,11 +8,21 @@
     --roundness: 7px;
 }
 
+@font-face {
+    font-family: HSMFont;
+    src: url("Font/HSMFont.otf") format("opentype");
+}
+
 html {
     box-sizing: border-box;
-    font-family: 'Raleway', sans-serif;
+    /*font-family: 'Raleway', sans-serif;*/
+    font-family: 'HSMFont', sans-serif;
     color: var(--dark);
     scroll-behavior: smooth;
+}
+
+p {
+    font-family: 'Raleway', sans-serif;
 }
 
 body {
@@ -63,12 +73,17 @@ body {
 }
 
 #logo {
-    font-family: Raleway;
     display: grid;
     justify-content: start;
     align-content: center;
     padding-left: 45px;
     color: var(--light);
+}
+
+#logo img {
+    max-width: 50%;
+    min-width: 50%;
+    min-height: 100%;
 }
 
 #links {
@@ -115,6 +130,7 @@ body {
     flex-direction: column;
     align-items: start;
     justify-content: center;
+    padding-left: 5rem;
 }
 
 .firstblock h1 {
