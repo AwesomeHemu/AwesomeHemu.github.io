@@ -204,10 +204,10 @@ footer {
         min-height: 400px;
     }
     .firstblock h1 {
-        font-size: 2.5rem;
+        font-size: 3.5rem;
     }
     .firstblock p {
-        font-size: 2rem;
+        font-size: 2.5rem;
     }
 }
 
@@ -228,11 +228,5 @@ footer {
     .top-container {
         grid-template-areas:
             'firstblock';
-    }
-    .firstblock h1 {
-        font-size: 1.5rem;
-    }
-    .firstblock p {
-        font-size: 1rem;
     }
 }
