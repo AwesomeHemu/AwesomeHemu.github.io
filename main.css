@@ -1,6 +1,6 @@
 /* CSS Global Variables   ---------NEO SANS FONT--------- */
 :root {
-    --primary: #ddd;
+    --primary: #5E3929;
     --dark: #333;
     --light: #fff;
     --bgcolor: #ccc;
@@ -10,7 +10,7 @@
 
 @font-face {
     font-family: HSMFont;
-    src: url("Font/HSMFont.otf") format("opentype");
+    src: url("Font/HSMFont.otf") format("truetype");
 }
 
 html {
@@ -55,7 +55,7 @@ body {
     background: url(img/stocklaptop.jpg);
     background-size: cover;
     background-position: center, 1px;
-    background-repeat: no-repeat;    
+    background-repeat: no-repeat;
 }
 
 /*navbar ---------------------------------- */
@@ -168,6 +168,7 @@ body {
 
 .box {
     background: var(--primary);
+    color: var(--light);
     text-align: center;
     padding: 1.7rem 2rem;
     box-shadow: var(--shadow);
@@ -183,15 +184,39 @@ body {
 .info {
     background: var(--primary);
     box-shadow: var(--shadow);
+    color: var(--light);
     display: grid;
     grid-gap: 30px;
     grid-template-columns: 1fr 1fr;
     padding: 3rem;
 }
 
+/* Contact us ---------------------------*/
+.contact {
+    background: linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2) ),url("img/communication.jpeg");
+    background-size: cover;
+    background-position: center, 1px;
+    background-repeat: no-repeat;
+    color: var(--light);
+    height: 80vh;
+    padding: 3rem;
+    padding-bottom: 0px;
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-left: 5rem;
+}
+
+.contact #title {
+    font-size: 4rem;
+}
+.contact #number {
+    font-size: 2.5rem;
+}
+
 footer {
-    /*maybe delete the top margin?*/
-    margin-top: 2rem;
     background: var(--dark);
     color: var(--light);
     text-align: center;
@@ -202,12 +227,6 @@ footer {
 @media(max-width: 800px) {
     .firstblock {
         min-height: 400px;
-    }
-    .firstblock h1 {
-        font-size: 3.5rem;
-    }
-    .firstblock p {
-        font-size: 2.5rem;
     }
 }
 
@@ -221,6 +240,12 @@ footer {
     .top-container {
         grid-template-areas:
             'firstblock firstblock';
+    }
+    .firstblock h1 {
+        font-size: 3.5rem;
+    }
+    .firstblock p {
+        font-size: 2.5rem;
     }
 }
 
