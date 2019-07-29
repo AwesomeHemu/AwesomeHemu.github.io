@@ -15,8 +15,7 @@
 
 html {
     box-sizing: border-box;
-    /*font-family: 'Raleway', sans-serif;*/
-    font-family: 'HSMFont', sans-serif;
+    font-family: 'HSMFont', 'Raleway', sans-serif;
     color: var(--dark);
     scroll-behavior: smooth;
 }
@@ -185,10 +184,39 @@ body {
     background: var(--primary);
     box-shadow: var(--shadow);
     color: var(--light);
+    margin-top: 0px;
+    min-height: 67vh;
+    padding: 70px 200px;    
+}
+
+.info img {
+    max-width: 500px;
+    max-height: 500px;
+    width: auto;
+    height: auto;
+}
+
+.info h1 {
+    margin-top: 0px;
+    font-size: 3.5rem;
+    padding-bottom: 60px;
+    text-align: center;
+}
+
+.info h3 {
+    grid-area: "title";
+    font-size: 2.2rem;
+    padding-bottom: 2rem;
+}
+
+.info p {
+    grid-area: "paragraph";
+    font-size: 1.5rem;
+}
+
+.infogrid {
     display: grid;
-    grid-gap: 30px;
     grid-template-columns: 1fr 1fr;
-    padding: 3rem;
 }
 
 /* Contact us ---------------------------*/
@@ -197,23 +225,28 @@ body {
     background-size: cover;
     background-position: center, 1px;
     background-repeat: no-repeat;
+    background-attachment: fixed;
     color: var(--light);
     height: 80vh;
-    padding: 3rem;
-    padding-bottom: 0px;
-    margin-bottom: 0;
+    padding: 2rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding-left: 5rem;
 }
 
 .contact #title {
     font-size: 4rem;
 }
 .contact #number {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
+}
+.contact #email {
+    font-size: 2.2rem;
+}
+.contact span {
+    font-family: Fredoka One;
+    font-weight: 500;
 }
 
 footer {
